@@ -34,24 +34,24 @@
 						<% end %>
 					</td>
 
-					<li>
+					<td>
 					  <i class="fa fa-comment"></i>
 					  <a href="#comments"><%= @book.book_comments.count %></a>
-					</li>
+					</td>
+					<td>
 					<div class="comment-list bt style-2" id="comments">
 					    <div class="float-wrapper">
-					        <h2 class="comment-count"><%= @book.book_comments.count %>件コメント</h2>
+					        <h4 class="comment-count"><%= @book.book_comments.count %>件コメント</h4>
 					    </div>
 					</div>
-
+					</td>
+					<td>
 					<ol>
 					    <% @book.book_comments.each do |book_comment| %>
 					        <li class="comment">
 					            <div class="comment-body bb">
 					                <div class="comment-avatar">
-					                    <div class="avatar">
-					                        <%= image_tag('sample-author1.jpg', style: "width: 60px; height: 60px;") %>
-					                    </div>
+
 					                </div>
 					                <div class="comment-text">
 					                    <div class="comment-author clearfix">
@@ -66,8 +66,10 @@
 					        </li>
 					    <% end %>
 					</ol>
+					</td>
 
 					<!-- <form class="mt-20"> -->
+					<td>
 					<%= form_for [@book, @book_comment] do |f| %>
 					    <div class="row">
 					        <div class="col-sm-12">
@@ -76,6 +78,7 @@
 					    </div>
 					    <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
 					<% end %>
+					</td>
 					<!-- </form> -->
 
 				</tr>

@@ -6,7 +6,9 @@ class User < ApplicationRecord
 
   has_many :books, dependent: :destroy
   has_many :book_comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   has_many :post_images, dependent: :destroy
+
 
   attachment :profile_image, destroy: false
 

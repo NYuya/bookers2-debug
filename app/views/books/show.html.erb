@@ -63,6 +63,10 @@
 					    </div>
 					</div>
 					</td>
+
+
+
+
 					<td>
 					<ol>
 					    <% @book.book_comments.each do |book_comment| %>
@@ -84,6 +88,12 @@
 					        </li>
 					    <% end %>
 					</ol>
+					</td>
+
+					<td>
+						<% if @book_comment.user == current_user %>
+						  <%= link_to "削除", book.book_comment_path(@book.book_comment), method: :delete %>
+						<% end %>
 					</td>
 
 					<!-- <form class="mt-20"> -->

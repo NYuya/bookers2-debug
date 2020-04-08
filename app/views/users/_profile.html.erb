@@ -5,10 +5,17 @@
 			<th>name</th>
 			<th><%= user.name %></th>
 		</tr>
-
 		<tr>
 			<th>introduction</th>
 			<th><%= user.introduction %></th>
+		</tr>
+		<tr>
+			<th>follows</th>
+			<th><%= user.relationships.count %></th>
+		</tr>
+		<tr>
+			<th>followers</th>
+			<th><%= user.followers.count %></th>
 		</tr>
 </table>
 
